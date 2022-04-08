@@ -29,9 +29,9 @@ public class ShopTest {
         assertEquals(2, shop.getStockCount());
     }
 
-//    @Test
-//    public void canRemoveStock(){
-//        shop.removeStock();
-//        assertEquals(0, shop.getStockCount());
-//    }
+    @Test
+    public void canRemoveStock(){
+        shop.removeStock(guitar);
+        assertEquals(0, shop.getStockCount());
+    }
 }
