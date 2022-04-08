@@ -11,11 +11,16 @@ public class SaxophoneTest {
 
     @Before
     public void before(){
-        saxophone = new Saxophone("gold", "yamaha", 400 ,SaxophoneType.ALTO);
+        saxophone = new Saxophone("gold", "yamaha", 400 ,200, SaxophoneType.ALTO);
     }
 
     @Test
     public void canPlay(){
         assertEquals("do do do dodododooooo", saxophone.play());
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(200, saxophone.calculateMarkup(), 0.01);
     }
 }

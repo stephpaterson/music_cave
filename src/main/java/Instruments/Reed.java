@@ -1,12 +1,21 @@
 package Instruments;
 
-public class Reed {
+import Behaviours.ISell;
+
+public class Reed implements ISell {
 
     private String material;
-    private double price;
+    private double sellPrice;
+    private double buyPrice;
 
-    public Reed(String material, double price) {
+    public Reed(String material, double sellPrice, double buyPrice) {
         this.material = material;
-        this.price = price;
+        this.sellPrice = sellPrice;
+        this.buyPrice = buyPrice;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return this.sellPrice - this.buyPrice;
     }
 }
