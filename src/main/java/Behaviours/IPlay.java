@@ -1,4 +1,4 @@
-package Instruments;
+package Behaviours;
 
 public interface IPlay {
 

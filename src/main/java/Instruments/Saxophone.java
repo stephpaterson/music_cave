@@ -1,11 +1,13 @@
 package Instruments;
 
-public class Saxophone extends Instrument implements IPlay{
+import Behaviours.IPlay;
+
+public class Saxophone extends Instrument implements IPlay {
 
     private SaxophoneType type;
 
-    public Saxophone(String colour, String brand, SaxophoneType type) {
-        super(colour, brand);
+    public Saxophone(String colour, String brand, double price, SaxophoneType type) {
+        super(colour, brand, price);
         this.type = type;
     }
 
