@@ -1,6 +1,6 @@
 package Instruments;
 
-public class Guitar extends Instrument{
+public class Guitar extends Instrument implements IPlay{
 
     private GuitarType type;
     private int numberOfStrings;
@@ -9,5 +9,10 @@ public class Guitar extends Instrument{
         super(colour, brand);
         this.type = type;
         this.numberOfStrings = numberOfStrings;
+    }
+
+    @Override
+    public String play() {
+        return "twing twang";
     }
 }
