@@ -1,8 +1,6 @@
 package Shop;
 
 import Behaviours.ISell;
-import Instruments.Guitar;
-import jdk.jfr.internal.consumer.RecordingInput;
 
 import java.util.ArrayList;
 
@@ -24,5 +22,13 @@ public class Shop {
 
     public void removeStock(ISell item) {
         stock.remove(item);
+    }
+
+    public double totalProfit() {
+        double totalProfit = 0;
+        for(ISell item : this.stock){
+            totalProfit += item.calculateMarkup();
+        }
+        return totalProfit;
     }
 }
